@@ -13,7 +13,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 particlesJS('particles-js',
   
-  {
+   {
     "particles": {
       "number": {
         "value": 80,
@@ -131,6 +131,8 @@ particlesJS('particles-js',
   }
 
 );
+
+
 // Sticky Navigation Menu JS Code
 let nav = document.querySelector("nav");
 let scrollBtn = document.querySelector(".scroll-button a");
@@ -167,7 +169,7 @@ cancelBtn.onclick = function(){
   scrollBtn.style.pointerEvents = "auto";
 }
 
-// Side Navigation Bar Close While We Click On Navigation Links
+// Side Navigation Bar Close When Navigation Links clicked
 let navLinks = document.querySelectorAll(".menu li a");
 for (var i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener("click" , function() {
