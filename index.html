@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Portfolio Website | CodingLab </title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu"><li> <a href="index.html"  class="active">home</a></li>
+        <li> <a href="#about">about</a></li>
+        <li><a href="services.html">services</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li>  <a href="blog.html">blogs</a></li>
+        <li><a href="contact.html">contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+    
+
+  <section class="home" id="home">
+
+      <div id="particles-js"></div>
+
+      <div class="content">
+          <img class="tilt" src="images/home-pic.png" alt="">
+          <h3> abdulkareem <span>ojerinde</span> </h3>
+          <p> i'm a <span class="typing-text"> web developer </span> </p>
+         
+
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- about section starts  -->
+
+  <section class="about" id="about">
+
+      <h1 class="heading"> about <span>me</span> </h1>
+
+      <div class="row">
+
+          <div class="image">
+              <img class="tilt" src="images/about-pic.jpg" alt="">
+          </div>
+
+          <div class="content">
+              <h3> my name is <span> abdulkareem ojerinde </span> </h3>
+              <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad debitis, dolorem omnis
+                  dolorum non provident distinctio inventore culpa in, nam eligendi quos modi vel aliquid blanditiis
+                  velit natus voluptatem deleniti.</p>
+              <div class="box-container">
+                  <div class="box">
+                      <p> <span> age: </span> 23 </p>
+                      <p> <span> gender: </span> male </p>
+                      <p> <span> experience : </span> 2 years </p>
+                      <p> <span> freelance : </span> available </p>
+                  </div>
+                  <div class="box">
+                      <p> <span> language : </span> english </p>
+                      <p> <span> phone : </span> <a href="tel:2348073051942">0(+234)80 7305 1942</a> </p>
+                      <p> <span> email : </span> <a
+                              href="mailto:abdulkareemojerinde@gmail.com">abdulkareemojerinde@gmail.com</a> </p>
+                      <p> <span> address : </span> Ibadan, Oyo State - 400104 </p>
+                  </div>
+              </div>
+              <a href="#" class="btn">download CV</a>
+          </div>
+
+      </div>
+
+  </section>
+
+  <!-- about section ends -->
+
+  <!-- footer section  -->
+
+  <div class="footer"> created by <span> me </span> | all rights reserved! </div>
+
+  <!-- javascript part  -->
+
+  <!-- typed.js link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+  <!-- particles.js links  -->
+  <script src="js/particles.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- vanilla-tilt.js link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+  <script>
+      let menu = document.querySelector('#menu-bars');
+      let header = document.querySelector('header');
+
+      menu.onclick = () => {
+          menu.classList.toggle('fa-times');
+          header.classList.toggle('active');
+      }
+
+      window.onscroll = () => {
+          menu.classList.remove('fa-times');
+          header.classList.remove('active');
+      };
+
+      var typed = new Typed('.typing-text', {
+          strings: ['front end developer', 'web designer', 'graphic designer', 'web developer'],
+          loop: true,
+          typeSpeed: 150
+      });
+
+      VanillaTilt.init(document.querySelectorAll('.tilt'), {
+          max: 25
+      });
+  </script>
+
+</body>
+</html>

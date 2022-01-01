@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Portfolio Website | CodingLab </title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu"><li> <a href="index.html"  class="active">home</a></li>
+        <li> <a href="#about">about</a></li>
+        <li><a href="services.html"  class="active">services</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li>  <a href="blog.html">blogs</a></li>
+        <li><a href="contact.html">contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+ 
+    
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> <span> my </span> services </h1>
+
+    <div class="box-container">
+
+        <div class="box tilt">
+            <i class="fas fa-code"></i>
+            <h3>web development</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-paint-brush"></i>
+            <h3>graphic design</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-mobile"></i>
+            <h3>Responsive designs</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fab fa-wordpress"></i>
+            <h3>wordpress</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+<!-- footer section  -->
+
+<div class="footer"> created by <span> me </span> | all rights reserved! </div>
+
+<script>
+  // Sticky Navigation Menu JS Code
+  let nav = document.querySelector("nav");
+  let scrollBtn = document.querySelector(".scroll-button a");
+  console.log(scrollBtn);
+  let val;
+  window.onscroll = function() {
+    if(document.documentElement.scrollTop > 20){
+      nav.classList.add("sticky");
+      scrollBtn.style.display = "block";
+    }else{
+      nav.classList.remove("sticky");
+      scrollBtn.style.display = "none";
+    }
+  
+  }
+  
+  // Side NavIgation Menu JS Code
+  let body = document.querySelector("body");
+  let navBar = document.querySelector(".navbar");
+  let menuBtn = document.querySelector(".menu-btn");
+  let cancelBtn = document.querySelector(".cancel-btn");
+  menuBtn.onclick = function(){
+    navBar.classList.add("active");
+    menuBtn.style.opacity = "0";
+    menuBtn.style.pointerEvents = "none";
+    body.style.overflow = "hidden";
+    scrollBtn.style.pointerEvents = "none";
+  }
+  cancelBtn.onclick = function(){
+    navBar.classList.remove("active");
+    menuBtn.style.opacity = "1";
+    menuBtn.style.pointerEvents = "auto";
+    body.style.overflow = "auto";
+    scrollBtn.style.pointerEvents = "auto";
+  }
+  
+  // Side Navigation Bar Close While We Click On Navigation Links
+  let navLinks = document.querySelectorAll(".menu li a");
+  for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click" , function() {
+      navBar.classList.remove("active");
+      menuBtn.style.opacity = "1";
+      menuBtn.style.pointerEvents = "auto";
+    });
+  }
+  
+  </script>
+</body>
+</html>
