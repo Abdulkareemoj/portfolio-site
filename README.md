@@ -1,7 +1,7 @@
 # Portfolio-site
 <h2 align="center">
   Portfolio Website - v1.0<br/>
-  <a href="http://omw" target="_blank">soumyajit.tech</a>
+  <a href="https://abdulkareemoj.github.io/portfolio-site/" target="_blank">Go here.</a>
 </h2>
 
 
