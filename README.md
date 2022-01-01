@@ -23,3 +23,7 @@ This project was built using these technologies.
 
 **📱 Fully Responsive**
 
+## TBC
+ - Add more content
+ - Add some blog pages
+ - Add CV
