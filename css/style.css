@@ -158,6 +158,13 @@ section {
 	text-transform: uppercase;
 	color: #222;
 }
+.heading2{
+	text-align: left;
+
+	font-size: 3rem;
+
+	color: #222;
+}
 
 .heading span {
 	text-transform: uppercase;
@@ -636,3 +643,4 @@ h2 {
     color: #27ae60;
   }
 }
+
