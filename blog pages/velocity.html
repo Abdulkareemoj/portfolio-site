@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>  Coding without video tutorials </title>
+    <link rel="stylesheet" href="/Responsive Portfolio Website/css/style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu"><li> <a href="/Responsive Portfolio Website/index.html">home</a></li>
+        <li> <a href="#about">about</a></li>
+        <li><a href="/Responsive Portfolio Website/services.html">services</a></li>
+        <li><a href="/Responsive Portfolio Website/portfolio.html">portfolio</a></li>
+        <li>  <a href="/Responsive Portfolio Website/blog.html"  class="active">blogs</a></li>
+        <li><a href="/Responsive Portfolio Website/contact.html">contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+    
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> Coding without video tutorials</h1>
+
+    <div class="box-container">
+        
+    <!-- insret article here-->
+    <br>
+    <br>
+    <br><article>
+      <h1 class="heading2">Hey There</h1>
+      <p>As developers we all struggle with one thing or another when coding or programming something, and thats normal we
+        always learn from that experience. What most people do is search up tutorial video and see if the problem they have
+        has been experienced by anyone else(i know ive done it, a lot). Its actually a good way to learn but if you do it
+        too much you end up looking at tutorials more often than you should and before you realise it youre in
+        tutorial hell.</p>
+      <br>
+      <br>
+      <br>
+      <h1 class="heading2">What is Tutorial Hell?</h1>
+      <img src="/Responsive Portfolio Website/images/doomguycourse.jpg" alt="Italian Trulli">
+      <p>
+        What is ‘Tutorial hell’?
+        As you start learning to code, It may feel like, youre learning a lot and one you decide to build something on your
+        own. You have your cmputer, your tools and your editor in front of you, but you can tseem to do anything . You
+        start another course and then the same happens and again for another course an over and over, this right here is
+        Tutorial hell.
+        " 'Tutorial hell' is typically the stage when beginner programmers come to 'sort of' knowing how to build some
+        simple things, but nothing really complex or scalable. They seem to need a tutorial for every other task they are
+        in need of doing. "
+        Urban Dictionary
+        When you continuously watch tutorials one after another and you feel like, you are learning a lot of things and
+        building some good projects. As soon as you start doing something on your own, you get to know that you don’t know
+        anything. sounds ludicrous right? You have built some good and large projects and still, you don’t know anything,
+        how is it even possible? This is what happens when you are in tutorial hell, you think you are learning, you are
+        accomplishing something, but what you are actually doing is depending on tutorials to teach you to solve the only
+        problem which you have watched. Itstops you from learning how to solve problems.
+        "Insanity is doing the same thing over and over again and expecting different results."
+        Albert Einstein
+
+</p>
+<h1 class="heading2">Alternatives to Tutorials </h1>
+<p>when you dont know what or how to start s project</p>    
+</article>
+</section>
+
+<!-- footer section  -->
+
+<div class="footer"> created by <span> me </span> | all rights reserved! </div>
+
+
+<script>
+  // Sticky Navigation Menu JS Code
+  let nav = document.querySelector("nav");
+  let scrollBtn = document.querySelector(".scroll-button a");
+  console.log(scrollBtn);
+  let val;
+  window.onscroll = function() {
+    if(document.documentElement.scrollTop > 20){
+      nav.classList.add("sticky");
+      scrollBtn.style.display = "block";
+    }else{
+      nav.classList.remove("sticky");
+      scrollBtn.style.display = "none";
+    }
+  
+  }
+  
+  // Side NavIgation Menu JS Code
+  let body = document.querySelector("body");
+  let navBar = document.querySelector(".navbar");
+  let menuBtn = document.querySelector(".menu-btn");
+  let cancelBtn = document.querySelector(".cancel-btn");
+  menuBtn.onclick = function(){
+    navBar.classList.add("active");
+    menuBtn.style.opacity = "0";
+    menuBtn.style.pointerEvents = "none";
+    body.style.overflow = "hidden";
+    scrollBtn.style.pointerEvents = "none";
+  }
+  cancelBtn.onclick = function(){
+    navBar.classList.remove("active");
+    menuBtn.style.opacity = "1";
+    menuBtn.style.pointerEvents = "auto";
+    body.style.overflow = "auto";
+    scrollBtn.style.pointerEvents = "auto";
+  }
+  
+  // Side Navigation Bar Close While We Click On Navigation Links
+  let navLinks = document.querySelectorAll(".menu li a");
+  for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click" , function() {
+      navBar.classList.remove("active");
+      menuBtn.style.opacity = "1";
+      menuBtn.style.pointerEvents = "auto";
+    });
+  }
+  
+  </script>
+</body>
+</html>
