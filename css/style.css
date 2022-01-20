@@ -337,6 +337,13 @@ section {
 	line-height: 2;
 }
 
+.vimg{
+	width:480px;
+	height:360x;
+	display: flex;
+	justify-content: center;
+}
+
 .portfolio .box-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -518,6 +525,13 @@ h2 {
 	text-align: justify;
 	padding: 40px 80px;
 	box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+	
+}
+
+.vimg{
+	width:680px;
+	height:560x;
+margin:0 auto;
 }
 
 /* Scroll TO Top Button CSS */
@@ -556,8 +570,9 @@ h2 {
   }
   .services .boxes .box{
     margin: 20px 0;
-    width: calc(100% / 2 - 20px);
-  }
+		width: calc(100% / 2 - 20px);
+	}
+	
 }
 @media (max-width: 900px) {
   .about .left img{
@@ -628,6 +643,14 @@ h2 {
   }
   .contact .text{
     width: 100%;
+}
+
+.vimg{
+	width: 100%;
+	margin: 20px 0;
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 }
 
