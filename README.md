@@ -23,9 +23,9 @@ This project was built using these technologies.
 
 **📱 Fully Responsive**
 
-**   Dark Mode**
+**   Dark Mode **
 
-## TBC
+## TBA
  - Add more content
  - Add some blog pages
  - Add CV
