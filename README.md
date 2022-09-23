@@ -29,3 +29,5 @@ This project was built using these technologies.
  - Add more content
  - Add some blog pages
  - Add CV
+
+## Scratch all that, rebuilding another one from scratch but with the same generali idea from this 
