@@ -23,7 +23,7 @@ This project was built using these technologies.
 
 **📱 Fully Responsive**
 
-**   Dark Mode **
+
 
 ## TBA
  - Add more content
